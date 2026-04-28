@@ -43,23 +43,22 @@
     <?php
     if (isset($_POST['submit'])) {
         $nama = trim($_POST['nama']);
-        $nama = ($_POST['nim']);
-        $nama = ($_POST['email']);
-        $nama = ($_POST['jurusan']);
+        $nim = ($_POST['nim']);
+        $email = ($_POST['email']);
+        $jurusan = ($_POST['jurusan']);
 
-        if (empty($_POST['nama'])) {
-            echo "Nama tidak boleh kosong!";
-        }else if(empty($_POST['nim'])){
-            echo "NIM tidak boleh kosong!";
-        }else if(empty($_POST['email'])){
-            echo "Email tidak boleh kosong";
-        }else if(empty($_POST['jurusan'])){
-            echo "jurusan tidak boleh kosong";
+        if (empty($_POST['nama'] && ['nim'] && ['email'] && ['jurusan'])) {
+            echo "DATA TIDAK BOLEH KOSONG BROW!";
         }else{
-            echo "Nama  : " . ucwords($nama);
-            echo "Nim: " . htmlspecialchars($nim);
-            echo "Nama: " . htmlspecialchars($email);
-            echo "Nama: " . htmlspecialchars($jurusan);
+            echo "Nama      : " . ucwords($nama) . "<br/>";
+            echo "Nim       : " . htmlspecialchars($nim) . "<br/>";
+            echo "Jurusan   : " . htmlspecialchars($jurusan) . "<br/>";
+        }
+
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            echo "Nama: " . htmlspecialchars($email) . "<br/>";
+        }else{
+            echo "Email tidak valid harus menggunakan @ contoh (Yudan Nur Alif)";
         }
     }
     ?>
