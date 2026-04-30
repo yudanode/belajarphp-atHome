@@ -10,10 +10,10 @@
 <?php 
 if(isset($_COOKIE['user'])){
     echo "isi coocky user: " . $_COOKIE['user'];
-]else{
+}else{
     echo "Coocky belum tersedia";
 }
-}
+
 
 ?>
     
