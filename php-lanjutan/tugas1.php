@@ -49,15 +49,15 @@
 
         if (empty($_POST['nama'] && ['nim'] && ['email'] && ['jurusan'])) {
             echo "DATA TIDAK BOLEH KOSONG BROW!";
-        }else{
+        } else {
             echo "Nama      : " . ucwords($nama) . "<br/>";
             echo "Nim       : " . htmlspecialchars($nim) . "<br/>";
             echo "Jurusan   : " . htmlspecialchars($jurusan) . "<br/>";
         }
 
-        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo "Nama: " . htmlspecialchars($email) . "<br/>";
-        }else{
+        } else {
             echo "Email tidak valid harus menggunakan @ contoh (Yudan Nur Alif)";
         }
     }
