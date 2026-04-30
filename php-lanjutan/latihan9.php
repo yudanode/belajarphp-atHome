@@ -8,10 +8,11 @@
 <body>
 
 <?php 
-if(isset($_COOKIE['user']))[
+if(isset($_COOKIE['user'])){
     echo "isi coocky user: " . $_COOKIE['user'];
 ]else{
-    echo "Coocky belum tersedia"
+    echo "Coocky belum tersedia";
+}
 }
 
 ?>
