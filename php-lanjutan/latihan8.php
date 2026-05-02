@@ -1,3 +1,6 @@
+<?php 
+setcookie("user","Mahasiswa", time()+3600)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+    echo "coockie berhasil diibuat"
+     ?>
     
 </body>
 </html>

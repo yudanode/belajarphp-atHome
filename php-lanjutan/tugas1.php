@@ -56,9 +56,9 @@
         }
 
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "Nama: " . htmlspecialchars($email) . "<br/>";
+            echo "Email: " . htmlspecialchars($email) . "<br/>";
         } else {
-            echo "Email tidak valid harus menggunakan @ contoh (Yudan Nur Alif)";
+            echo "Email tidak valid harus menggunakan @ contoh (yudannuralif@gmail.com)";
         }
     }
     ?>

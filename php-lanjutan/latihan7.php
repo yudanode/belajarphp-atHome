@@ -1,5 +1,6 @@
 <?php
-setcookie("user", "Mahasiswa", time()+3600);
+session_start();
+session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +13,9 @@ setcookie("user", "Mahasiswa", time()+3600);
 </head>
 
 <body>
-    <?php 
-    echo "Coocky berhasil dibuat";
-     ?>
+    <h3>INI PUNYA YUDAN NUR ALIF LATIHAN 1</h3>
+    
+    session telah dihapus.
 
 </body>
 
