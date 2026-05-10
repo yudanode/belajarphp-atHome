@@ -1,6 +1,7 @@
 <?php
 include "koneksi.php";
 $querry = mysqli_query($conn, "SELECT * FROM mahasiswa");
+$nim_full = "253307";
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,6 @@ $querry = mysqli_query($conn, "SELECT * FROM mahasiswa");
     <h2>DATA MAHASISWA POLITEKNIK NEGERI MADIUN</h2>
     <table border="1" cellpadding="8" cellspacing="0">
         <tr>
-            <th>No</th>
             <th>Nim</th>
             <th>Nama</th>
             <th>Prodi</th>
@@ -24,14 +24,12 @@ $querry = mysqli_query($conn, "SELECT * FROM mahasiswa");
         </tr>
 
         <?php
-        $no = 1;
         while ($data = mysqli_fetch_assoc($querry)) { ?>
             <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $data["nim"]; ?></td>
-                <td><?php echo $data["nama"] ?></td>
-                <td><?php echo $data["prodi"] ?></td>
-                <td><?php echo $data["email"] ?></td>
+                <td><?= $nim_full . $data['nim']; ?></td>
+                <td><?= $data['nama']; ?></td>
+                <td><?= $data['prodi']; ?></td>
+                <td><?= $data['email']; ?></td>
             </tr>
         <?php } ?>
     </table>
