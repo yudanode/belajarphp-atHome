@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<h2>ini punya yudan</h2>
 <?php 
 if(isset($_COOKIE['user'])){
     echo "isi coocky user: " . $_COOKIE['user'];
