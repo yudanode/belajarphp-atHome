@@ -32,7 +32,8 @@ $nim_full = "253307";
                 <td><?= $data['prodi']; ?></td>
                 <td><?= $data['email']; ?></td>
                 <td>
-                    <a href="update.php?nim=<?= $data['nim']; ?>">Edit</a>
+                    <a href="update.php?nim=<?= $data['nim']; ?>">Edit</a><br>
+                    <a href="delete.php?nim=<?= $data['nim'] ?> " onclick="return confirm('yakin hapus data?')">Delete</a>
                 </td>
             </tr>
         <?php } ?>
