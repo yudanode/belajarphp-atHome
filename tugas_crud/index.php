@@ -1,6 +1,6 @@
 <?php
 include "koneksi.php";
-$querry = mysqli_query($conn, "SELECT * FROM mahasiswa");
+$querry = mysqli_query($conn, "SELECT * FROM mahasiswa ORDER BY nim ASC");
 $nim_full = "253307";
 ?>
 
@@ -21,6 +21,7 @@ $nim_full = "253307";
             <th>Nama</th>
             <th>Prodi</th>
             <th>Email</th>
+            <th>Aksi</th>
         </tr>
 
         <?php
@@ -30,6 +31,9 @@ $nim_full = "253307";
                 <td><?= $data['nama']; ?></td>
                 <td><?= $data['prodi']; ?></td>
                 <td><?= $data['email']; ?></td>
+                <td>
+                    <a href="update.php?nim=<?= $data['nim']; ?>">Edit</a>
+                </td>
             </tr>
         <?php } ?>
     </table>
